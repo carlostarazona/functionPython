@@ -85,11 +85,7 @@ def scrape_site(dni,dia_emisión,mes_emisión,año_emisión,dia_nacimiento,mes_n
     try:
         wait.until(EC.presence_of_all_elements_located((By.TAG_NAME,"mat-dialog-container")))[0]
         time.sleep(1)
-        jhdid = wait.until(EC.presence_of_element_located((By.XPATH,"/html")))
-        time.sleep(1)
-        hello = jhdid.text
-        driver.close()
-        return hello
+        return 500
     except:
         try:
             Terminos =  wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/app-root/app-auth/div/div/app-term/div/div/div/div/div/div[1]/div/div[1]/input")))
